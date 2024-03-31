@@ -1,0 +1,708 @@
+{
+  "name": "ldp",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "mplsl3vpn",
+        "bridge": "br-a07da0aff800",
+        "ipv4-subnet": "172.100.100.0/24",
+        "ipv4-gw": "172.100.100.1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ce1a": {
+      "index": "0",
+      "shortname": "ce1a",
+      "longname": "clab-ldp-ce1a",
+      "fqdn": "ce1a.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce1a",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.211",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce1a",
+        "clab-node-name": "ce1a",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce1b": {
+      "index": "1",
+      "shortname": "ce1b",
+      "longname": "clab-ldp-ce1b",
+      "fqdn": "ce1b.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce1b",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.212",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce1b",
+        "clab-node-name": "ce1b",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2a": {
+      "index": "2",
+      "shortname": "ce2a",
+      "longname": "clab-ldp-ce2a",
+      "fqdn": "ce2a.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce2a",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.221",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce2a",
+        "clab-node-name": "ce2a",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2b": {
+      "index": "3",
+      "shortname": "ce2b",
+      "longname": "clab-ldp-ce2b",
+      "fqdn": "ce2b.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce2b",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.222",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/ce2b",
+        "clab-node-name": "ce2b",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p1": {
+      "index": "4",
+      "shortname": "p1",
+      "longname": "clab-ldp-p1",
+      "fqdn": "p1.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p1",
+        "clab-node-name": "p1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p2": {
+      "index": "5",
+      "shortname": "p2",
+      "longname": "clab-ldp-p2",
+      "fqdn": "p2.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.102",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p2",
+        "clab-node-name": "p2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p3": {
+      "index": "6",
+      "shortname": "p3",
+      "longname": "clab-ldp-p3",
+      "fqdn": "p3.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p3",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.103",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p3",
+        "clab-node-name": "p3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p4": {
+      "index": "7",
+      "shortname": "p4",
+      "longname": "clab-ldp-p4",
+      "fqdn": "p4.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p4",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.104",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p4",
+        "clab-node-name": "p4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p5": {
+      "index": "8",
+      "shortname": "p5",
+      "longname": "clab-ldp-p5",
+      "fqdn": "p5.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p5",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.105",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/p5",
+        "clab-node-name": "p5",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc1": {
+      "index": "9",
+      "shortname": "pc1",
+      "longname": "clab-ldp-pc1",
+      "fqdn": "pc1.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc1",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc1",
+        "clab-node-name": "pc1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc2": {
+      "index": "10",
+      "shortname": "pc2",
+      "longname": "clab-ldp-pc2",
+      "fqdn": "pc2.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc2",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc2",
+        "clab-node-name": "pc2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc3": {
+      "index": "11",
+      "shortname": "pc3",
+      "longname": "clab-ldp-pc3",
+      "fqdn": "pc3.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc3",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc3",
+        "clab-node-name": "pc3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc4": {
+      "index": "12",
+      "shortname": "pc4",
+      "longname": "clab-ldp-pc4",
+      "fqdn": "pc4.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc4",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pc4",
+        "clab-node-name": "pc4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe1": {
+      "index": "13",
+      "shortname": "pe1",
+      "longname": "clab-ldp-pe1",
+      "fqdn": "pe1.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pe1",
+      "kind": "ceos",
+      "image": "ceosimage:4.31.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:be:51:bd",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pe1",
+        "clab-node-name": "pe1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe2": {
+      "index": "14",
+      "shortname": "pe2",
+      "longname": "clab-ldp-pe2",
+      "fqdn": "pe2.ldp.io",
+      "group": "",
+      "labdir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pe2",
+      "kind": "ceos",
+      "image": "ceosimage:4.31.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:70:c3:b4",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a07da0aff800",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/clab-ldp/pe2",
+        "clab-node-name": "pe2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/arista/avd-cEOS-Lab/labs/luminy/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "ldp"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "ce1a",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a5:b5:41",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bd:e5:e3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2a",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9d:4c:3b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b8:0d:f2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce1b",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e9:1a:7b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0f:19:40",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2b",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:18:05:97",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:80:ca:99",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9e:35:22",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce1a",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:aa:fa:5c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:12:72:45",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce2a",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e3:22:40",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:dc:78:42",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce1b",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:41:b3:28",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ad:14:bb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce2b",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f3:b0:9b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:cf:00:6c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:49:d3:e2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe1",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:44:32:98",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:61:aa:57",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e0:63:27",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:60:52:8a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:fc:62:81",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ff:46:b7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:58:42:58",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:af:32:3d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p2",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:a1:a1:1a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d9:bd:6f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a9:6e:06",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ea:4b:32",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:96:f0:df",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:15:c7:7c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:a2:6c:63",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p4",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:f5:e6:e0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe2",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:66:e3:35",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:4b:f2:f7",
+        "peer": "a"
+      }
+    }
+  ]
+}
