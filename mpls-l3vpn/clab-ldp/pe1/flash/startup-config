@@ -1,9 +1,9 @@
-! Startup-config last modified at Sun Mar 31 21:23:05 2024 by admin
+! Startup-config last modified at Sun Mar 31 21:29:56 2024 by root
 ! device: pe1 (cEOSLab, EOS-4.31.2F-35442176.4312F (engineering build))
 !
 no aaa root
 !
-username admin privilege 15 role network-admin secret sha512 $6$Njd3XgUQ/OIxNcQO$KTmVRv7V2k9kZDxXmKOoxs45zwOBjndkXYntIbdMm/dc8yTXkllvKuuGtTUo.vEXQPtwd3MUk/ccQf8tAIABq/
+username admin privilege 15 role network-admin secret sha512 $6$QCnQDZVjOUry8wy9$J0ajHUsjlIw.H37cAA8BNxazD27ebix91shxBqdbAOybbCclZa/vVGxLpYofi9BCujjMlpUWLyzNRCefoxt.Q.
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -32,10 +32,6 @@ management security
       certificate eAPI.crt key eAPI.key
 !
 interface Ethernet1
-   mtu 1500
-   no switchport
-   ip address 10.11.101.11/24
-   ip ospf network point-to-point
 !
 interface Ethernet2
 !
@@ -43,22 +39,14 @@ interface Ethernet3
 !
 interface Ethernet4
 !
-interface Loopback0
-   ip address 11.11.11.11/32
-!
 interface Management0
    description oob_management
    vrf MGMT
    ip address 172.100.100.11/24
 !
-ip routing
+no ip routing
 no ip routing vrf MGMT
 !
 ip route vrf MGMT 0.0.0.0/0 172.100.100.1
-!
-router ospf 1
-   router-id 11.11.11.11
-   network 10.11.101.11/32 area 0.0.0.0
-   max-lsa 12000
 !
 end
