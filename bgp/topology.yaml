@@ -1,4 +1,4 @@
-name: ldp
+name: bgp
 
 topology:
   kinds:
