@@ -53,9 +53,11 @@ topology:
     pe1:
       kind: ceos
       mgmt-ipv4: 172.100.100.11
+      startup-config: pe1/startup.cfg
     pe2:
       kind: ceos
       mgmt-ipv4: 172.100.100.12
+      startup-config: pe2/startup.cfg
     ce1a:
       kind: linux
       image: frrouting/frr:latest
