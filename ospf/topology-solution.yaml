@@ -1,0 +1,126 @@
+name: ospf
+
+topology:
+  kinds:
+    ceos:
+      startup-config: ../../../../ceos_lab_template/ceos.cfg.tpl
+      image: ceosimage:4.31.2F
+      exec:
+        - sleep 10
+        - FastCli -p 15 -c 'security pki key generate rsa 4096 eAPI.key'
+        - FastCli -p 15 -c 'security pki certificate generate self-signed eAPI.crt key eAPI.key generate rsa 4096 validity 30000 parameters common-name eAPI'
+  nodes:
+    p1:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - p1/daemons:/etc/frr/daemons
+        - p1/frr-solution.conf:/etc/frr/frr.conf
+        - p1/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      mgmt-ipv4: 172.100.100.101
+    p2:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - p2/daemons:/etc/frr/daemons
+        - p2/frr-solution.conf:/etc/frr/frr.conf
+        - p2/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      mgmt-ipv4: 172.100.100.102
+    p3:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - p3/daemons:/etc/frr/daemons
+        - p3/frr-solution.conf:/etc/frr/frr.conf
+        - p3/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      mgmt-ipv4: 172.100.100.103
+    p4:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - p4/daemons:/etc/frr/daemons
+        - p4/frr-solution.conf:/etc/frr/frr.conf
+        - p4/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      mgmt-ipv4: 172.100.100.104
+    p5:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - p5/daemons:/etc/frr/daemons
+        - p5/frr-solution.conf:/etc/frr/frr.conf
+        - p5/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      mgmt-ipv4: 172.100.100.105
+    pe1:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.11
+      startup-config: pe1/startup-solution.cfg
+    pe2:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.12
+      startup-config: pe2/startup-solution.cfg
+    ce1a:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ce1a/daemons:/etc/frr/daemons
+        - ce1a/frr-solution.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.100.100.211
+    ce1b:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ce1b/daemons:/etc/frr/daemons
+        - ce1b/frr-solution.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.100.100.212
+    ce2a:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ce2a/daemons:/etc/frr/daemons
+        - ce2a/frr-solution.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.100.100.221
+    ce2b:
+      kind: linux
+      image: frrouting/frr:latest
+      binds:
+        - ce2b/daemons:/etc/frr/daemons
+        - ce2b/frr-solution.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.100.100.222
+    pc1:
+      kind: linux
+      image: nicolaka/netshoot:latest
+    pc2:
+      kind: linux
+      image: nicolaka/netshoot:latest
+    pc3:
+      kind: linux
+      image: nicolaka/netshoot:latest
+    pc4:
+      kind: linux
+      image: nicolaka/netshoot:latest
+
+
+
+  links:
+    - endpoints: ["ce1a:eth1", "pe1:eth1"]
+    - endpoints: ["ce2a:eth1", "pe1:eth2"]
+    - endpoints: ["ce1b:eth1", "pe2:eth1"]
+    - endpoints: ["ce2b:eth1", "pe2:eth2"]
+    - endpoints: ["pc1:eth1", "ce1a:eth2"]
+    - endpoints: ["pc2:eth1", "ce2a:eth2"]
+    - endpoints: ["pc3:eth1", "ce1b:eth2"]
+    - endpoints: ["pc4:eth1", "ce2b:eth2"]
+    - endpoints: ["pe1:eth3", "p1:eth1"]
+    - endpoints: ["pe1:eth4", "p2:eth1"]
+    - endpoints: ["p1:eth2", "p2:eth2"]
+    - endpoints: ["p1:eth3", "p3:eth1"]
+    - endpoints: ["p2:eth3", "p5:eth2"]
+    - endpoints: ["p2:eth4", "p4:eth1"]
+    - endpoints: ["p3:eth2", "p5:eth1"]
+    - endpoints: ["p4:eth2", "p5:eth3"]
+    - endpoints: ["pe2:eth3", "p4:eth3"]
+    - endpoints: ["pe2:eth4", "p5:eth4"]
+
+mgmt:
+  network: mplsl3vpn
+  ipv4-subnet: 172.100.100.0/24
