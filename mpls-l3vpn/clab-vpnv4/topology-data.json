@@ -1,0 +1,708 @@
+{
+  "name": "vpnv4",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "mplsl3vpn",
+        "bridge": "br-16fd0f0bcd3e",
+        "ipv4-subnet": "172.100.100.0/24",
+        "ipv4-gw": "172.100.100.1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ce1a": {
+      "index": "0",
+      "shortname": "ce1a",
+      "longname": "clab-vpnv4-ce1a",
+      "fqdn": "ce1a.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce1a",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.211",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce1a",
+        "clab-node-name": "ce1a",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce1b": {
+      "index": "1",
+      "shortname": "ce1b",
+      "longname": "clab-vpnv4-ce1b",
+      "fqdn": "ce1b.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce1b",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.212",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce1b",
+        "clab-node-name": "ce1b",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2a": {
+      "index": "2",
+      "shortname": "ce2a",
+      "longname": "clab-vpnv4-ce2a",
+      "fqdn": "ce2a.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce2a",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.221",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce2a",
+        "clab-node-name": "ce2a",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2b": {
+      "index": "3",
+      "shortname": "ce2b",
+      "longname": "clab-vpnv4-ce2b",
+      "fqdn": "ce2b.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce2b",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.222",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/ce2b",
+        "clab-node-name": "ce2b",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p1": {
+      "index": "4",
+      "shortname": "p1",
+      "longname": "clab-vpnv4-p1",
+      "fqdn": "p1.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p1",
+        "clab-node-name": "p1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p2": {
+      "index": "5",
+      "shortname": "p2",
+      "longname": "clab-vpnv4-p2",
+      "fqdn": "p2.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.102",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p2",
+        "clab-node-name": "p2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p3": {
+      "index": "6",
+      "shortname": "p3",
+      "longname": "clab-vpnv4-p3",
+      "fqdn": "p3.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p3",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.103",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p3",
+        "clab-node-name": "p3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p4": {
+      "index": "7",
+      "shortname": "p4",
+      "longname": "clab-vpnv4-p4",
+      "fqdn": "p4.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p4",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.104",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p4",
+        "clab-node-name": "p4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p5": {
+      "index": "8",
+      "shortname": "p5",
+      "longname": "clab-vpnv4-p5",
+      "fqdn": "p5.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p5",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.105",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/p5",
+        "clab-node-name": "p5",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc1": {
+      "index": "9",
+      "shortname": "pc1",
+      "longname": "clab-vpnv4-pc1",
+      "fqdn": "pc1.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc1",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc1",
+        "clab-node-name": "pc1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc2": {
+      "index": "10",
+      "shortname": "pc2",
+      "longname": "clab-vpnv4-pc2",
+      "fqdn": "pc2.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc2",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc2",
+        "clab-node-name": "pc2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc3": {
+      "index": "11",
+      "shortname": "pc3",
+      "longname": "clab-vpnv4-pc3",
+      "fqdn": "pc3.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc3",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc3",
+        "clab-node-name": "pc3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pc4": {
+      "index": "12",
+      "shortname": "pc4",
+      "longname": "clab-vpnv4-pc4",
+      "fqdn": "pc4.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc4",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pc4",
+        "clab-node-name": "pc4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe1": {
+      "index": "13",
+      "shortname": "pe1",
+      "longname": "clab-vpnv4-pe1",
+      "fqdn": "pe1.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pe1",
+      "kind": "ceos",
+      "image": "ceosimage:4.31.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:5a:20:f2",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pe1",
+        "clab-node-name": "pe1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe2": {
+      "index": "14",
+      "shortname": "pe2",
+      "longname": "clab-vpnv4-pe2",
+      "fqdn": "pe2.vpnv4.io",
+      "group": "",
+      "labdir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pe2",
+      "kind": "ceos",
+      "image": "ceosimage:4.31.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:51:7a:c3",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-16fd0f0bcd3e",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/bruno/network-virtualization-labs/mpls-l3vpn/clab-vpnv4/pe2",
+        "clab-node-name": "pe2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/bruno/network-virtualization-labs/mpls-l3vpn/topology.yaml",
+        "containerlab": "vpnv4"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "ce1a",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:47:df:b1",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f3:d6:12",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2a",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:c7:e3",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:57:cc:61",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce1b",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:42:8d:06",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:0b:e9:bb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2b",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:bd:f6:16",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:73:4b:da",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b4:db:8d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce1a",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:49:2a:65",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:04:a1:40",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce2a",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e3:25:26",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:14:15:fc",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce1b",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:53:1e:81",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pc4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fe:63:9f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ce2b",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:b1:fc:c7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:19:3b:4e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:66:3c:d6",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe1",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:68:bb:01",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:2e:51:c5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:cb:58:41",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4f:4d:17",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:40:fe:31",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8d:0f:fa",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:da:07:2a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:fa:b9:82",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p2",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:72:f9:4f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9f:c0:36",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9f:22:8c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ef:77:7a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "p4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f4:e0:24",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:30:eb:3c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:02:94:92",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p4",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:1f:cb:34",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe2",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:6b:cd:f4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p5",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:00:3b:9c",
+        "peer": "a"
+      }
+    }
+  ]
+}

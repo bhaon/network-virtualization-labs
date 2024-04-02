@@ -1,4 +1,4 @@
-name: ospf
+name: ldp
 
 topology:
   kinds:
@@ -15,7 +15,7 @@ topology:
       image: frrouting/frr:latest
       binds:
         - p1/daemons:/etc/frr/daemons
-        - p1/frr.conf:/etc/frr/frr.conf
+        - p1/frr-solution.conf:/etc/frr/frr.conf
         - p1/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.101
     p2:
@@ -23,7 +23,7 @@ topology:
       image: frrouting/frr:latest
       binds:
         - p2/daemons:/etc/frr/daemons
-        - p2/frr.conf:/etc/frr/frr.conf
+        - p2/frr-solution.conf:/etc/frr/frr.conf
         - p2/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.102
     p3:
@@ -31,7 +31,7 @@ topology:
       image: frrouting/frr:latest
       binds:
         - p3/daemons:/etc/frr/daemons
-        - p3/frr.conf:/etc/frr/frr.conf
+        - p3/frr-solution.conf:/etc/frr/frr.conf
         - p3/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.103
     p4:
@@ -39,7 +39,7 @@ topology:
       image: frrouting/frr:latest
       binds:
         - p4/daemons:/etc/frr/daemons
-        - p4/frr.conf:/etc/frr/frr.conf
+        - p4/frr-solution.conf:/etc/frr/frr.conf
         - p4/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.104
     p5:
@@ -47,25 +47,17 @@ topology:
       image: frrouting/frr:latest
       binds:
         - p5/daemons:/etc/frr/daemons
-        - p5/frr.conf:/etc/frr/frr.conf
+        - p5/frr-solution.conf:/etc/frr/frr.conf
         - p5/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.105
     pe1:
-      kind: linux
-      image: frrouting/frr:latest
-      binds:
-        - pe1/daemons:/etc/frr/daemons
-        - pe1/frr.conf:/etc/frr/frr.conf
-        - pe1/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      kind: ceos
       mgmt-ipv4: 172.100.100.11
+      startup-config: pe1/startup-solution.cfg
     pe2:
-      kind: linux
-      image: frrouting/frr:latest
-      binds:
-        - pe2/daemons:/etc/frr/daemons
-        - pe2/frr.conf:/etc/frr/frr.conf
-        - pe2/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      kind: ceos
       mgmt-ipv4: 172.100.100.12
+      startup-config: pe2/startup-solution.cfg
     ce1a:
       kind: linux
       image: frrouting/frr:latest
