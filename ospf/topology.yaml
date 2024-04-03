@@ -51,21 +51,13 @@ topology:
         - p5/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
       mgmt-ipv4: 172.100.100.105
     pe1:
-      kind: linux
-      image: frrouting/frr:latest
-      binds:
-        - pe1/daemons:/etc/frr/daemons
-        - pe1/frr.conf:/etc/frr/frr.conf
-        - pe1/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      kind: ceos
       mgmt-ipv4: 172.100.100.11
+      startup-config: pe1/startup.cfg
     pe2:
-      kind: linux
-      image: frrouting/frr:latest
-      binds:
-        - pe2/daemons:/etc/frr/daemons
-        - pe2/frr.conf:/etc/frr/frr.conf
-        - pe2/90-mpls.conf:/etc/sysctl.d/90-mpls.conf
+      kind: ceos
       mgmt-ipv4: 172.100.100.12
+      startup-config: pe2/startup.cfg
     ce1a:
       kind: linux
       image: frrouting/frr:latest
